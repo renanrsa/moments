@@ -11,7 +11,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
   allMoments: Moment[] = []
-  momets: Moment[]=[]
+  moments: Moment[]=[]
   baseApiUrl = environment.baseApiUrl
 
   constructor(private moementService : MomentService) {
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
         );
       });
       this.allMoments=data;
-      this.momets = data;
+      this.moments = data;
     });
   }
 
