@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MomentService } from 'src/app/services/moment.service';
+import { Moment } from 'src/app/Moment';
+import { environment } from 'src/environments/environment';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  allMoments: Moment[] = []
+  momets: Moment[]=[]
+  baseApiUrl = environment.baseApiUrl
 
-  constructor() { }
+  constructor(private moementService : MomentService) {
+
+   }
 
   ngOnInit(): void {
+    this.moementService.getMoments().subscribe((itens)->)
   }
 
 }
