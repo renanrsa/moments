@@ -10,9 +10,9 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  allMoments: Moment[] = []
-  moments: Moment[]=[]
-  baseApiUrl = environment.baseApiUrl
+  allMoments: Moment[] = [];
+  moments: Moment[]=[];
+  baseApiUrl = environment.baseApiUrl;
 
   constructor(private moementService : MomentService) {
 
